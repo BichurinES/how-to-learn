@@ -9,23 +9,340 @@
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
+/* Класс для модификации блока в относительный.
+Нужен для применения к блокам с абсолютно позиционированными элементами.
+Согласно БЭМ применяется как модификатор, а не включается напрямую
+в стили блоков */
+.relative_block {
+  position: relative;
+}
+
+
+/* Шапка сайта */
+
 .header {
+  display: flex;
+  align-items: center;
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
   /* выше установили ограничения для секции */
+  background-color: #f2f2f2;
 }
 
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+.logo {
+  width: 183px;
+  height: 32px;
+  background-image: url('../images/logo_place_header.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.logo_place_header {
+  position: absolute;
+  z-index: 10;
+  top: 30px;
+  left: 64px;
+}
+
+.header__title {
+  margin: 0 0 0 64px;
+  width: 730px;
+  line-height: 96px;
+  font-size: 102px;
+  font-weight: bold;
+}
+
+.header__subtitle {
+  position: absolute;
+  z-index: 10;
+  bottom: 30px;
+  left: 64px;
+  width: 388px;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.header__link {
+  text-decoration: none;
+  color: #2f80ed
+}
+
+.header__main-illustration {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  width: 765px;
+  height: 608px;
+}
+
 .header__square-pic {
-  height: 568px;
+  position: absolute;
+  z-index: 0;
+  top: 64px;
+  right: 0;
   width: 568px;
+  height: 568px;
+  background-color: #2f80ed;
 }
 
-/* и элемента с модификатором вида ключ-значение */
+/* Главные проблемы в обучении */
+
+.description {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.two-columns {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.two-columns__brief {
+  width: 175px;
+  margin: 0;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  color: #2f80ed;
+}
+
+.two-columns__main-text {
+  width: 80%;
+  min-width: 784px;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.two-columns__paragraph {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.two-columns__paragraph:last-of-type {
+  margin-bottom: 0px;
+}
+
+.two-columns__span-accent {
+  font-weight: bold;
+}
+
+/* Цифры и факты */
+
+.digits {
+  padding: 100px 0px;
+}
+
+.section-title {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.section-title_space_bottom {
+  margin-bottom: 20px;
+}
+
+.section-subtitle {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0 auto;
+  width: 1100px;
+  list-style: none;
+}
+
+.table__cell {
+  width: 250px;
+  margin-top: 60px;
+}
+
+.table__heading {
+  margin: 0;
+  margin-bottom: 20px;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.table__text {
+  margin: 0;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.table__text:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Метод Фреймана */
+
+.feinman {
+  box-sizing: border-box;
+  min-height: 875px;
+  padding-top: 100px;
+  background-color: #f2f2f2;
+  background-image: url('../images/feynman.png');
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+
+.feinman__title {
+  margin: 0 auto 70px;
+  width: 648px;
+  text-align: center;
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: bold;
+}
+
+.feinman__subtitle {
+  text-align: center;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+}
+
+.feinman__link {
+  position: absolute;
+  top: 50%;
+  right: 48px;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  color: #2f80ed;
+  text-decoration: none;
+}
+
+/* Принципы Кауфмана */
+
+.kaufman {
+  background-color: #000;
+  padding: 90px 0;
+  overflow: hidden;
+}
+
+.section-title_theme_dark {
+  z-index: 1;
+  color: #fff;
+}
+
+.section-subtitle_theme_dark {
+  z-index: 1;
+  color:#fff;
+}
+
 .table__cell_theme_dark {
+  z-index: 1;
   width: 200px;
-  color: white;
+  color: #fff;
   margin-right: 0;
   margin-top: 80px;
+}
+
+.kaufman__triangle {
+  position: absolute;
+  top: 0;
+  right: -210px;
+  z-index: 0;
+  width: 877px;
+  height: 877px;
+  background-image: url('../images/kaufman-triangle.svg');
+}
+
+/* Подвал сайта */
+
+.footer {
+  box-sizing: border-box;
+  min-height: 350px;
+  background-color: #000;
+  padding: 60px 0 40px;
+}
+
+.footer__columns {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  min-height: 250px;
+  margin: 0 auto;
+}
+
+.footer__column_content_copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 711px;
+}
+
+.logo_place_footer {
+  background-image: url('../images/logo_place_footer.svg');
+  height: 35px;
+}
+
+.footer__author {
+  padding: 18px 0;
+  margin: 0;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+  color: #fff;
+}
+
+.footer__column_content_info {
+
+}
+
+.footer__column-heading {
+  color: #fff;
+  margin: 0;
+  margin-bottom: 20px;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer__column-links {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 16px;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/* класс необходим для прямого форматирования текста ссылок, так как
+селектор по тэгу не по БЭМ, а также для превращения ссылки в блок,
+чтобы не было необходимости попадать точно в текст,
+а также и в область рядом */
+.footer__column-link {
+  display: flex;
+  color: #fff;
+  text-decoration: none;
+  align-items: center;
+}
+
+.footer__social-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
 }

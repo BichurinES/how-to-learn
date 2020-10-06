@@ -118,7 +118,7 @@
 }
 
 .two-columns__paragraph:last-of-type {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .two-columns__span-accent {
@@ -128,7 +128,7 @@
 /* Цифры и факты */
 
 .digits {
-  padding: 100px 0px;
+  padding: 100px 0;
 }
 
 .section-title {

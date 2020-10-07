@@ -62,6 +62,10 @@
   color: #2f80ed;
 }
 
+.header__link:hover {
+  color: #1f1f1f;
+}
+
 .header__main-illustration {
   position: absolute;
   z-index: 1;
@@ -222,6 +226,10 @@
   font-weight: normal;
   color: #2f80ed;
   text-decoration: none;
+}
+
+.feinman__link:hover {
+  color: #1f1f1f;
 }
 
 /* Принципы Кауфмана */

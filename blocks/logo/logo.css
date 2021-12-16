@@ -4,9 +4,4 @@
   background-image: url('../../images/logo/logo_place_header.svg');
   background-size: contain;
   background-repeat: no-repeat;
-  transition: opacity .4s ease;
-}
-
-.logo:hover {
-  opacity: .5;
 }

@@ -1,8 +1,12 @@
 @import url(../vendor/normalize.css);
 
 @import url(../blocks/page/page.css);
+@import url(../blocks/page/__header/page__header.css);
+@import url(../blocks/page/__kaufman/page__kaufman.css);
+@import url(../blocks/page/__link/page__link.css);
 
 @import url(../blocks/rotation/rotation.css);
+@import url(../blocks/center-content/center-content.css);
 
 @import url(../blocks/header/header.css);
 @import url(../blocks/header/__title/header__title.css);
@@ -41,6 +45,7 @@
 
 @import url(../blocks/section-title/section-title.css);
 @import url(../blocks/section-title/_theme/section-title_theme_dark.css);
+@import url(../blocks/section-title/_pos/section-title_pos_mb.css);
 
 @import url(../blocks/section-subtitle/section-subtitle.css);
 @import url(../blocks/section-subtitle/_theme/section-subtitle_theme_dark.css);

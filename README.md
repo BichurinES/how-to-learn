@@ -1,7 +1,7 @@
 ![Header](./images/readme/readme__header.png "Header")
 
 # Проект "Научиться учиться"
-Ссылка на проект - <a href="https://bichurines.github.io/how-to-learn/" target="_blank">https://bichurines.github.io/how-to-learn/</a>
+Ссылка на проект - <a href="https://bichurines.github.io/how-to-learn/" target="_blank">Научиться учиться</a>
 
 ## Описание проекта
 Сайт посвящен современным подходам и методикам обучения. Разобраны основные концепции, а также есть ссылке на дополнительные материалы.
